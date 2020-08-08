@@ -1,14 +1,13 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, Animated} from 'react-native';
+import ChangePosition from './ChangePosition';
 
 const Timing = () => {
   return (
-    <View>
-      <Text>Timing</Text>
+    <View style={{flex: 1}}>
+      <ChangePosition />
     </View>
   );
 };
 
 export default Timing;
-
-const styles = StyleSheet.create({});
