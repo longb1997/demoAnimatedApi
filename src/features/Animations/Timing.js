@@ -1,30 +1,21 @@
-import React, {useEffect, useRef} from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  Animated,
-  Easing,
-  Pressable,
-  TouchableOpacity,
-  PanResponder,
-} from 'react-native';
+import React, {useRef} from 'react';
+import {Animated, Easing, Text, TouchableOpacity, View} from 'react-native';
 
-const ChangePosition = () => {
+const Timing = () => {
   const aniValue = useRef(new Animated.Value(0)).current;
 
-  function jumpToSpecifyPosition() {
+  function moveToRandomPosition() {
     Animated.timing(aniValue, {
       toValue: Math.floor(Math.random() * 300),
-      duration: 1000,
-      delay: 0,
+      duration: 2000,
+      delay: 2000,
       easing: Easing.linear,
       useNativeDriver: true,
     }).start();
   }
 
   return (
-    <View style={{alignItems: 'center', margin: 16}}>
+    <View style={{margin: 16}}>
       <Animated.View
         style={{
           width: 100,
@@ -38,13 +29,11 @@ const ChangePosition = () => {
           ],
         }}
       />
-      <TouchableOpacity
-        onPress={jumpToSpecifyPosition}
-        style={{paddingTop: 16}}>
-        <Text>Move to random position</Text>
+      <TouchableOpacity onPress={moveToRandomPosition} style={{paddingTop: 16}}>
+        <Text>Move to random position on 2s with delay 2s</Text>
       </TouchableOpacity>
     </View>
   );
 };
 
-export default ChangePosition;
+export default Timing;

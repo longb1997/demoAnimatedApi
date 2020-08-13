@@ -26,9 +26,7 @@ const Block = (props) => {
 const Home = () => {
   const {navigate} = useNavigation();
   const BLOCK = [
-    {id: 1, title: 'Timing', navigate: () => navigate('Timing')},
-    {id: 2, title: 'Spring', navigate: () => navigate('Timing')},
-    {id: 3, title: 'Decay', navigate: () => navigate('Timing')},
+    {id: 1, title: 'Animations', navigate: () => navigate('Animations')},
     {id: 4, title: 'PanResponder', navigate: () => navigate('PanRes')},
   ];
   return (
