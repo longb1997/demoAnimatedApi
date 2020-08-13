@@ -7,7 +7,7 @@ const Composing = () => {
   const aniValue2 = useRef(new Animated.Value(0)).current;
 
   function moveToRandomPosition() {
-    Animated.stagger(1000, [
+    Animated.sequence([
       Animated.timing(aniValue1, {
         toValue: 200,
         duration: 3000,

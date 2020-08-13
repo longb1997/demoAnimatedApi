@@ -7,6 +7,7 @@ const Interpolation = () => {
   function moveToRandomPosition() {
     Animated.timing(aniValue, {
       toValue: 1,
+      duration: 3000,
       useNativeDriver: true,
     }).start();
   }
@@ -23,13 +24,7 @@ const Interpolation = () => {
             {
               translateX: aniValue.interpolate({
                 inputRange: [0, 0.2, 0.8, 1],
-                outputRange: [0, 150, 100, 200],
-              }),
-            },
-            {
-              scale: aniValue.interpolate({
-                inputRange: [0, 0.2, 0.8, 1],
-                outputRange: [1, 1.5, 0.6, 1],
+                outputRange: [0, 200, 0, 200],
               }),
             },
           ],

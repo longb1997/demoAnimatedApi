@@ -7,8 +7,8 @@ const Spring = () => {
   function moveToRandomPosition() {
     Animated.spring(aniValue, {
       toValue: Math.floor(Math.random() * 300),
-      speed: 30,
-      bounciness: 20,
+      tension: 50,
+      friction: 20,
       useNativeDriver: true,
     }).start();
   }

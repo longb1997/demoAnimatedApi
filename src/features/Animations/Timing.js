@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import {Animated, Easing, Text, TouchableOpacity, View} from 'react-native';
 
 const Timing = () => {
@@ -8,7 +8,7 @@ const Timing = () => {
     Animated.timing(aniValue, {
       toValue: Math.floor(Math.random() * 300),
       duration: 2000,
-      delay: 2000,
+      delay: 1000,
       easing: Easing.linear,
       useNativeDriver: true,
     }).start();

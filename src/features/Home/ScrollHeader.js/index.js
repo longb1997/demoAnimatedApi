@@ -15,7 +15,7 @@ const ScrollHeader = () => {
 
   const onDeltaY = Animated.event(
     [{nativeEvent: {contentOffset: {y: scrollY}}}],
-    {useNativeDriver: true},
+    {listener: (event) => console.log('event', event)},
   );
 
   return (
@@ -70,20 +70,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal: 16,
-    backgroundColor: '#Fff',
     height: 100,
-  },
-  fake_icon_box: {
-    backgroundColor: '#e4e6eb',
-    width: 40,
-    height: 40,
-    borderRadius: 40,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  scroll_view: {
-    flex: 1,
   },
   fake_post: {
     height: 250,
