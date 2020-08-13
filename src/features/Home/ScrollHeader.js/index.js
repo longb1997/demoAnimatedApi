@@ -39,8 +39,9 @@ const ScrollHeader = () => {
                 },
                 {
                   scale: scrollY.interpolate({
-                    inputRange: [-100, 0, 100, 150],
-                    outputRange: [2, 1, 0.5, 0.5],
+                    inputRange: [-100, 100],
+                    outputRange: [2, 0],
+                    extrapolate: 'clamp',
                   }),
                 },
               ],
