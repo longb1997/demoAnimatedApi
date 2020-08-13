@@ -13,8 +13,6 @@ import {
 const ScrollHeader = () => {
   const scrollY = useRef(new Animated.Value(0)).current;
 
-  //   const diffClampScrollY = Animated.diffClamp(scrollY, 0, 50);
-
   const onDeltaY = Animated.event(
     [{nativeEvent: {contentOffset: {y: scrollY}}}],
     {useNativeDriver: true},
