@@ -27,7 +27,8 @@ const Home = () => {
   const {navigate} = useNavigation();
   const BLOCK = [
     {id: 1, title: 'Animations', navigate: () => navigate('Animations')},
-    {id: 4, title: 'PanResponder', navigate: () => navigate('PanRes')},
+    {id: 2, title: 'PanResponder', navigate: () => navigate('PanRes')},
+    {id: 3, title: 'Heading', navigate: () => navigate('Heading')},
   ];
   return (
     <View style={styles.container}>
